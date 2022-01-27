@@ -1,0 +1,26 @@
+using System;
+namespace FirstProject
+{ 
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            
+            Console.WriteLine("Enter the number between 1 and 10: ");
+            var InputValue = Console.ReadLine();
+            var number = Convert.ToInt32(InputValue);
+            Console.WriteLine("You've entered " + InputValue);
+
+            if (number >= 1 && number <=10)
+            {
+                Console.WriteLine("Valid becuase value is between 1 and 10");
+            }
+            else
+            {
+                Console.WriteLine("Invalid because value is not between 1 and 10");
+            }
+
+        }
+    }
+}
