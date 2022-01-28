@@ -1,0 +1,36 @@
+using System;
+namespace FirstProject
+{ 
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the Speed Limit: ");
+            var SpeedLimit = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the Speed of the Car: ");
+            var CarSpeed = Convert.ToInt32(Console.ReadLine());
+
+            if (SpeedLimit > CarSpeed)
+            {
+                Console.WriteLine("You are within speed Limit");
+            }
+            else 
+            {
+                const int kmPerDemeritPoint = 5;
+                var demeritPoints = (CarSpeed - SpeedLimit) / kmPerDemeritPoint;
+
+                if (demeritPoints > 12)
+                {
+                    Console.WriteLine("Liscense Suspended");
+                }
+                else
+                {
+                    Console.WriteLine("Demerit Points : " + demeritPoints);
+                }
+            }
+
+
+        }
+    }
+}
