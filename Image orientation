@@ -1,0 +1,20 @@
+using System;
+namespace FirstProject
+{ 
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the height of the image: ");
+            var height = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the width of the image: ");
+            var width = Convert.ToInt32(Console.ReadLine());
+
+            var orientation = width > height ? ImageOrientation.Landscape : ImageOrientation.Portrait;
+            Console.WriteLine("Image orientaion is " + orientation);
+            
+
+        }
+    }
+}
